@@ -156,10 +156,10 @@ namespace SharpDemo1
             Point p1 = new Point() { x = 1, y = 2 };
             Point p2 = new Point() { x = 12, y = 3 };
             LineSegment line = new LineSegment();
-            Cat pussy = new Cat();
+            Cat Kitty = new Cat();
             Cat murzik = new Cat();
 
-            IDrawable[] objects = { p1, p2, pussy };
+            IDrawable[] objects = { p1, p2, Kitty };
 
             RenderScene(objects);
 
@@ -190,14 +190,14 @@ namespace SharpDemo1
             Point p1 = new Point() { x = 1, y = 2 };
             Point p2 = new Point() { x = 12, y = 3 };
             LineSegment line = new LineSegment();
-            Cat pussy = new Cat();
+            Cat Kitty = new Cat();
             Cat murzik = new Cat();
             string oops = "oops";
 
             List<IDrawable> figures = new List<IDrawable>();
             figures.Add(p1);
             figures.Add(p2);
-            figures.Add(pussy);
+            figures.Add(Kitty);
             figures.Remove(p1);
 
             ProcessList(figures);
@@ -223,7 +223,7 @@ namespace SharpDemo1
             Point p1 = new Point() { x = 1, y = 2 };
             Point p2 = new Point() { x = 12, y = 3 };
             LineSegment line = new LineSegment();
-            Cat pussy = new Cat();
+            Cat Kitty = new Cat();
             Cat murzik = new Cat();
             string oops = "oops";
 
@@ -231,7 +231,7 @@ namespace SharpDemo1
             {
                 { "FirstPoint", p1},
                 { "SecondPoint", p2},
-                { "Pussy", pussy},
+                { "Kitty", Kitty},
                 { "Murzik", new Cat()}
             };
 
@@ -247,7 +247,7 @@ namespace SharpDemo1
                 }
             }
 
-            if (figures.ContainsKey("Pussy"))
+            if (figures.ContainsKey("Kitty"))
             {
                 Console.WriteLine("Cat OK!");
             }
@@ -259,8 +259,8 @@ namespace SharpDemo1
             drawableSet.Add(p2);
             drawableSet.Add(p1);
             drawableSet.Add(p1);
-            drawableSet.Add(pussy);
-            drawableSet.Contains(pussy);
+            drawableSet.Add(Kitty);
+            drawableSet.Contains(Kitty);
 
             Console.WriteLine(string.Format("Elements: {0}", drawableSet.Count));
 
