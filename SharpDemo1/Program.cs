@@ -220,6 +220,28 @@ namespace SharpDemo1
 
         static void Main(string[] args)
         {
+            Demo.testOne();
+            return;
+
+            /** Read integers list from console demo */
+            Console.WriteLine("Input numbers:");
+            var res = Console.ReadLine();
+
+            Console.WriteLine($"Res: {res}");
+
+            string[] parts = res.Split(' ');
+
+            var values = parts.Select(
+                x => {
+                    return x.IndexOf(',') > 0 ? (Object)float.Parse(x) : x;
+                }
+            );
+
+            foreach (var item in values)
+            {
+                Console.WriteLine($"Item: {item.GetType()}");
+            }            
+
             Point p1 = new Point() { x = 1, y = 2 };
             Point p2 = new Point() { x = 12, y = 3 };
             LineSegment line = new LineSegment();
